@@ -218,14 +218,37 @@ d3.csv("assets/data/data.csv").then(function(data, err) {
         .attr("cx", d => xLinearScale(d[chosenXAxis]))
         .attr("cy", d => yLinearScale(d[chosenYAxis]))
         .attr("r", 13)
-        .classed('stateCircle', true);
+        .classed('stateCircle', true)
+        .on("mouseover", function(d) {
+            toolTip.show(d, this);
+            d3.select(this).style("stroke", "#323232");
+        })
+        .on("mouseout", function(d) {
+            // Remove the tooltip
+            toolTip.hide(d);
+            // Remove highlight
+            d3.select(this).style("stroke", "#e3e3e3");
+        });
 
     // append text inside circles
     var circlesText = circlesGroup.append("text")
         .text(d => d.abbr)
         .attr("dx", d => xLinearScale(d[chosenXAxis]))
         .attr("dy", d => yLinearScale(d[chosenYAxis])+5) //to center the text in the circles
-        .classed('stateText', true);
+        .classed('stateText', true)
+        // Hover Rules
+        .on("mouseover", function(d) {
+        // Show the tooltip
+        toolTip.show(d);
+        // Highlight the state circle's border
+        d3.select("." + d.abbr).style("stroke", "#323232");
+        })
+        .on("mouseout", function(d) {
+        // Remove tooltip
+        toolTip.hide(d);
+        // Remove highlight
+        d3.select("." + d.abbr).style("stroke", "#e3e3e3");
+        });
     
     // Create group for three x-axis labels
     var xlabelsGroup = chartGroup.append("g")
