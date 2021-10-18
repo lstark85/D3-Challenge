@@ -1,4 +1,4 @@
-# D3 Homework - Data Journalism and D3
+# D3 - Data Journalism and D3
 
 ![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
 
@@ -60,30 +60,6 @@ While the ticks on the axes allow us to infer approximate values for each circle
 
 * Check out [David Gotz's example](https://bl.ocks.org/davegotz/bd54b56723c154d25eedde6504d30ad7) to see how you should implement tooltips with d3-tip.
 
-- - -
 
-### Assessment
-
-Your final product will be assessed on the following metrics:
-
-* Creation of a **new** repository on GitHub called `D3-Challenge` (note the kebab-case). Do not add to an already existing repo.
-
-* Completion of all steps in the core assignment
-
-* Coherency of scatter plot (labels, ticks)
-
-* Visual attraction
-
-* Professionalism
-
-* Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file
-
-**Good luck!**
-
-## Rubric
-
-[Unit 16 Rubric - D3 Homework - Data Journalism and D3](https://docs.google.com/document/d/10v1svLr0DM7jvJlBqUKaCbGWcv-xT5rK9AMafU6su14/edit?usp=sharing)
-
-- - -
 
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
